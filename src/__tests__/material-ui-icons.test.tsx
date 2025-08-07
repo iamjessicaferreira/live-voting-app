@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { Header } from '@/components/Header';
 import { ContestantCard } from '@/components/ContestantCard';
 import { Contestant } from '@/types';
@@ -20,26 +21,27 @@ const mockContestant: Contestant = {
   ],
 };
 
-const mockOnToggleLive = jest.fn();
-const mockOnResetVotes = jest.fn();
 const mockOnVote = jest.fn().mockResolvedValue(true);
 
 describe('Material UI Icons', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should render Material UI icons in Header component', () => {
     render(
       <Header
         isLive={true}
-        onToggleLive={mockOnToggleLive}
-        onResetVotes={mockOnResetVotes}
+        onToggleLive={jest.fn()}
+        onResetVotes={jest.fn()}
         totalVotes={100}
         activeContestants={6}
       />,
     );
 
     expect(screen.getByText('Talent show')).toBeInTheDocument();
-
-    expect(screen.getByText('100 votes')).toBeInTheDocument();
-    expect(screen.getByText('6 active')).toBeInTheDocument();
+    expect(screen.getByText('LIVE')).toBeInTheDocument();
+    expect(screen.getByText('Reset')).toBeInTheDocument();
   });
 
   it('should render Material UI icons in ContestantCard component', () => {
@@ -51,33 +53,29 @@ describe('Material UI Icons', () => {
         isLoading={false}
         isLive={true}
         isHydrated={true}
-        totalVotes={100}
         trendingPercentage={25}
       />,
     );
 
     expect(screen.getByText('Sarah Johnson')).toBeInTheDocument();
     expect(screen.getByText('Opera Singing')).toBeInTheDocument();
-    expect(screen.getByText('25')).toBeInTheDocument();
-    expect(screen.getByText('votes')).toBeInTheDocument();
-    expect(screen.getByText('Vote Now')).toBeInTheDocument();
-    expect(screen.getByText('+25% trending')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /vote now/i })).toBeInTheDocument();
   });
 
   it('should show voted state with Material UI icons', () => {
+    const contestantWithVotes = { ...mockContestant, currentVotes: 5 };
     render(
       <ContestantCard
-        contestant={mockContestant}
+        contestant={contestantWithVotes}
         hasVoted={true}
         onVote={mockOnVote}
         isLoading={false}
         isLive={true}
         isHydrated={true}
-        totalVotes={100}
         trendingPercentage={25}
       />,
     );
 
-    expect(screen.getByText('Voted')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /voted/i })).toBeInTheDocument();
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { GlobalErrorProvider, useGlobalError } from '@/components/GlobalErrorHandler';
 import { simulateVoteApi } from '@/utils/api';
@@ -67,7 +67,7 @@ describe('Error Handling', () => {
       const originalRandom = Math.random;
       Math.random = jest.fn(() => 0.01);
 
-      const result = await simulateVoteApi('1');
+      const result = await simulateVoteApi();
 
       expect(result.error).toBeTruthy();
       expect(result.error?.message).toBe(
@@ -82,7 +82,7 @@ describe('Error Handling', () => {
       const originalRandom = Math.random;
       Math.random = jest.fn(() => 0.5);
 
-      const result = await simulateVoteApi('1');
+      const result = await simulateVoteApi();
 
       expect(result.error).toBeNull();
       expect(result.data).toEqual({ success: true });

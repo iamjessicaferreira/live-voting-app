@@ -28,7 +28,7 @@ export async function apiCall<T>(url: string, options: RequestInit = {}): Promis
 
     const data = await response.json();
     return { data, error: null };
-  } catch (error) {
+  } catch {
     return {
       data: null,
       error: {
@@ -39,9 +39,7 @@ export async function apiCall<T>(url: string, options: RequestInit = {}): Promis
   }
 }
 
-export async function simulateVoteApi(
-  contestantId: string,
-): Promise<ApiResponse<{ success: boolean }>> {
+export async function simulateVoteApi(): Promise<ApiResponse<{ success: boolean }>> {
   await new Promise((resolve) => setTimeout(resolve, 500));
 
   if (Math.random() < 0.02) {

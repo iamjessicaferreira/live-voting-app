@@ -15,7 +15,7 @@ export const useGlobalError = () => {
   const context = useContext(GlobalErrorContext);
   if (!context) {
     return {
-      showError: (error: ApiError) => {},
+      showError: () => {},
       clearError: () => {},
       currentError: null,
     };

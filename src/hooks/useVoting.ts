@@ -108,7 +108,7 @@ export const useVoting = ({ contestants, onVoteSuccess, isLive = true }: UseVoti
 
       try {
         const result = await execute(async () => {
-          const apiResponse = await simulateVoteApi(contestantId);
+          const apiResponse = await simulateVoteApi();
 
           if (apiResponse.error) {
             throw {

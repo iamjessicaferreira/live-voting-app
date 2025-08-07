@@ -86,7 +86,7 @@ export const useLiveVotes = ({ initialContestants }: UseLiveVotesOptions) => {
       setContestants((prevContestants) => {
         return prevContestants.map(updateContestantVotes);
       });
-    } catch (error) {
+    } catch {
       showError({
         message: 'Unable to update live votes. Please refresh the page.',
         type: 'server',
@@ -98,7 +98,7 @@ export const useLiveVotes = ({ initialContestants }: UseLiveVotesOptions) => {
     interval: POLLING_INTERVAL_MS,
     enabled: isLive,
     onPoll: simulateVoteUpdate,
-    onError: (error) => {
+    onError: () => {
       showError({
         message: 'Live updates temporarily unavailable. Please refresh the page.',
         type: 'network',

@@ -31,14 +31,14 @@ export class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.props.onError?.(error, errorInfo);
 
-    // in a real application, this would be sent to an error reporting service
-    const errorReport = {
-      errorId: this.state.errorId,
-      error: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-    };
+    // In a real application, you would send this to an error reporting service
+    // const errorReport = {
+    //   errorId: this.state.errorId,
+    //   error: error.message,
+    //   stack: error.stack,
+    //   componentStack: errorInfo.componentStack,
+    //   timestamp: new Date().toISOString(),
+    // };
   }
 
   handleRefresh = () => {
@@ -46,16 +46,15 @@ export class ErrorBoundary extends Component<Props, State> {
   };
 
   handleReportError = () => {
-    const { error, errorId } = this.state;
+    const { error } = this.state;
     if (error) {
-      const errorReport = {
-        errorId,
-        error: error.message,
-        stack: error.stack,
-        timestamp: new Date().toISOString(),
-      };
-
-      // in a real application, this would be sent to an error reporting service
+      // In a real application, you would send this to an error reporting service
+      // const errorReport = {
+      //   errorId: this.state.errorId,
+      //   error: error.message,
+      //   stack: error.stack,
+      //   timestamp: new Date().toISOString(),
+      // };
     }
   };
 

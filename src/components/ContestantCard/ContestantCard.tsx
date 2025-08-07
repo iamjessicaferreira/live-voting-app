@@ -1,10 +1,10 @@
 'use client';
 
 import { Contestant } from '@/types';
-import { ContestantImage } from './ContestantImage';
-import { ContestantInfo } from './ContestantInfo';
 import { VoteButton } from './VoteButton';
 import { TrendingIndicator } from './TrendingIndicator';
+import { ContestantInfo } from './ContestantInfo';
+import { ContestantImage } from './ContestantImage';
 
 interface ContestantCardProps {
   contestant: Contestant;
@@ -13,7 +13,6 @@ interface ContestantCardProps {
   isLoading: boolean;
   isLive: boolean;
   isHydrated: boolean;
-  totalVotes: number;
   trendingPercentage?: number | null;
 }
 
@@ -24,7 +23,6 @@ export const ContestantCard: React.FC<ContestantCardProps> = ({
   isLoading,
   isLive,
   isHydrated,
-  totalVotes,
   trendingPercentage,
 }) => {
   const shouldShowVotedState = hasVoted && contestant.currentVotes > 0;

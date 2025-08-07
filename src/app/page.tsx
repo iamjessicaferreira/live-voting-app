@@ -58,7 +58,6 @@ export default function Home() {
         isLoading={isLoadingFor(contestant.id)}
         isLive={isLive}
         isHydrated={isHydrated}
-        totalVotes={totalVoteCount}
         trendingPercentage={calculateTrendingPercentage(contestant)}
       />
     ));
