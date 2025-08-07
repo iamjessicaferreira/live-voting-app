@@ -1,4 +1,4 @@
-# 🎭 Talent Show Voting Application
+# 🎭 Talent Show voting application
 
 Live demo: https://live-voting-beta.vercel.app/
 
