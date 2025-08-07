@@ -1,5 +1,7 @@
 # 🎭 Talent Show Voting Application
 
+Live demo: https://live-voting-beta.vercel.app/
+
 A modern, responsive voting application built with React, Next.js, and TypeScript. Users can vote for their favorite contestants in a talent show, with real-time updates and trending calculations.
 
 ## ✨ Features
