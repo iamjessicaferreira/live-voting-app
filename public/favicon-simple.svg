@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Background -->
+  <circle cx="12" cy="12" r="11" fill="#8B5CF6"/>
+
+  <!-- Microphone -->
+  <path d="M9 6a3 3 0 0 1 6 0v6a3 3 0 0 1-6 0V6z" fill="white"/>
+  <path d="M10 18h4v2h-4z" fill="white"/>
+  <path d="M8 20h8v1H8z" fill="white"/>
+</svg>

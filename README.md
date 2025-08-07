@@ -259,4 +259,5 @@ For support, please open an issue in the GitHub repository or contact the develo
 - **Test Execution**: ~5-6 seconds for full test suite
 - **Type Checking**: <1 second
 - **Linting**: <2 seconds
+
 # live-voting-app
