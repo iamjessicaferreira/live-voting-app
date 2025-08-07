@@ -4,16 +4,16 @@ A modern, responsive voting application built with React, Next.js, and TypeScrip
 
 ## ✨ Features
 
-- **🎯 Interactive Voting**: Cast votes for contestants with real-time feedback
-- **📊 Live Updates**: Simulated real-time vote updates with polling (every 3 seconds)
-- **📈 Trending Analytics**: Calculate and display trending percentages based on 30-second intervals
-- **💾 Persistent State**: Vote state persists across page reloads using localStorage
-- **📱 Responsive Design**: Optimized for mobile, tablet, and desktop
-- **🛡️ Error Handling**: Comprehensive error boundaries and graceful error handling
-- **🧪 Testing**: Full test coverage with Jest and React Testing Library (75.75% statement coverage)
-- **♿ Accessibility**: Keyboard navigation and screen reader support
-- **🔒 Type Safety**: Robust TypeScript implementation with strict type checking
-- **🎨 Clean Code**: Follows clean code principles with modular architecture
+- **Interactive voting**: Cast votes for contestants with real-time feedback
+- **Live updates**: Simulated real-time vote updates with polling (every 3 seconds)
+- **Trending analytics**: Calculate and display trending percentages based on 30-second intervals
+- **Persistent state**: Vote state persists across page reloads using localStorage
+- **Responsive design**: Optimized for mobile, tablet, and desktop
+- **Error handling**: Comprehensive error boundaries and graceful error handling
+- **Testing**: Full test coverage with Jest and React Testing Library (75.75% statement coverage)
+- **Accessibility**: Keyboard navigation and screen reader support
+- **Type safety**: Robust TypeScript implementation with strict type checking
+- **Clean code**: Follows clean code principles with modular architecture
 
 ## 🚀 Quick Start
 
@@ -120,19 +120,19 @@ const MAX_VOTE_INCREMENT = 3; // Maximum votes per update
 
 The application includes comprehensive tests covering:
 
-- **Component Testing**: All components are tested with React Testing Library
-- **Hook Testing**: Custom hooks are tested for proper behavior and error handling
-- **Integration Testing**: End-to-end user interactions and voting flows
-- **Error Handling**: Error boundaries, error states, and validation
+- **Component testing**: All components are tested with React Testing Library
+- **Hook testing**: Custom hooks are tested for proper behavior and error handling
+- **Integration testing**: End-to-end user interactions and voting flows
+- **Error handling**: Error boundaries, error states, and validation
 - **Accessibility**: Keyboard navigation and screen reader support
-- **Mobile Responsiveness**: Cross-device compatibility testing
+- **Mobile responsiveness**: Cross-device compatibility testing
 
 ### Test Coverage
 
-- **Statement Coverage**: 75.75%
-- **Branch Coverage**: 75.34%
-- **Function Coverage**: 76%
-- **Line Coverage**: 74.69%
+- **Statement coverage**: 75.75%
+- **Branch coverage**: 75.34%
+- **Function coverage**: 76%
+- **Line coverage**: 74.69%
 
 ### Running Tests
 
@@ -153,7 +153,7 @@ The application uses:
 
 - **Tailwind CSS**: For utility-first styling and responsive design
 - **Material-UI Icons**: For consistent iconography and accessibility
-- **Responsive Design**: Mobile-first approach with breakpoints for all devices
+- **Responsive design**: Mobile-first approach with breakpoints for all devices
 - **CSS Grid & Flexbox**: For modern layout techniques
 
 ## 🔧 Configuration
@@ -206,58 +206,21 @@ npm start
 
 The application implements comprehensive error handling:
 
-- **Error Boundaries**: Catch and display React component errors
-- **Global Error Context**: Centralized error management with user-friendly messages
+- **Error boundaries**: Catch and display React component errors
+- **Global error Context**: Centralized error management with user-friendly messages
 - **Validation**: Input validation with clear error feedback
-- **Network Error Handling**: Graceful handling of API failures
-- **localStorage Error Handling**: Fallback for storage issues
-- **Type Safety**: TypeScript prevents many runtime errors
+- **Network error handling**: Graceful handling of API failures
+- **localStorage error handling**: Fallback for storage issues
+- **Type safety**: TypeScript prevents many runtime errors
 
 ## 🎯 Clean Code Principles
 
 The codebase follows clean code principles:
 
-- **Single Responsibility**: Each function and component has one clear purpose
-- **DRY (Don't Repeat Yourself)**: Reusable hooks and utilities
-- **KISS (Keep It Simple)**: Simple, readable code without complexity
-- **SOLID Principles**: Proper separation of concerns and dependencies
-- **Meaningful Names**: Descriptive variable and function names
-- **Small Functions**: Functions are kept small and focused
-- **No Magic Numbers**: All important values are named constants
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Code Quality
-
-Before committing, ensure:
-
-- All tests pass (`npm test`)
-- Code is linted (`npm run lint`)
-- Code is formatted (`npm run format`)
-- TypeScript types are valid (`npm run type-check`)
-- No console statements remain in production code
-- Error handling is implemented for new features
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🆘 Support
-
-For support, please open an issue in the GitHub repository or contact the development team.
-
-## 📊 Performance Metrics
-
-- **Build Time**: ~4-5 seconds
-- **Bundle Size**: ~133 kB (First Load JS)
-- **Test Execution**: ~5-6 seconds for full test suite
-- **Type Checking**: <1 second
-- **Linting**: <2 seconds
-
-# live-voting-app
+- **Single responsibility**: Each function and component has one clear purpose
+- **DRY (don't repeat yourself)**: Reusable hooks and utilities
+- **KISS (keep it simple)**: Simple, readable code without complexity
+- **SOLID principles**: Proper separation of concerns and dependencies
+- **Meaningful names**: Descriptive variable and function names
+- **Small functions**: Functions are kept small and focused
+- **No magic numbers**: All important values are named constants
